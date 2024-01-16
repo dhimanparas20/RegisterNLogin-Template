@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="icon" href="/static/images/user.png" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" id="loadingSpinner" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+<form id="register-form">    
+    <div id="register-box">
+    <h1>Register Here</h1>
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <div id="otpcontainer">
+        <input id="otp" type="tel" name="otp" placeholder="OTP" required>
+        <input  type="button" id="sendOTP" value="Send OTP">
+    </div>
+    <div style="position: relative;">
+        <input type="password" minlength="8" maxlength="30" id="password" name="password" placeholder="Password" required><span class="toggle-password" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></span>
+    </div>
+    <div style="position: relative;">
+        <input type="password" minlength="8" maxlength="30" id="confirm-password" name="confirm-password" placeholder="confirm Password" required>
+    </div>
+    <button type="submit" id="register-btn">Register</button>
+    <a href="/googlelogin"><button id="register-btn2" type="button"><i class="fab fa-google" ></i></button></a><br>
+    <a href="/login" id="register-now">Login Instead!</a>
+    <br>
+    </div>
+</form>    
+
+<!-- Move your script after the body content -->
+<script src="/static/js/register.js"></script>
+
+</body>
+</html>
